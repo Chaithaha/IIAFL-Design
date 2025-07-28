@@ -7,6 +7,10 @@
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div id="loading-screen">
+    <div class="spinner"></div>
+    <div class="loading-message">Let's Grow Together</div>
+  </div>
   <div class="container" role="main">
     <h1>Transforming Potential into Success</h1>
     <p class="subtext">
@@ -36,5 +40,15 @@
     </a>
   </div>
 
+  <script>
+    // Loading screen handler
+    window.addEventListener('load', function() {
+      // Add a small delay to make the loading animation visible
+      setTimeout(() => {
+        const loadingScreen = document.getElementById('loading-screen');
+        loadingScreen.classList.add('loading-screen-hidden');
+      }, 1500); // 1.5 second delay
+    });
+  </script>
 </body>
 </html>
